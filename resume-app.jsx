@@ -123,13 +123,6 @@ function Sidebar({ data }) {
             <p className="info-value">{data.contact.email}</p>
           </div>
         </a>
-        <a className="info-item" href={`tel:${data.contact.phone}`}>
-          <span className="info-icon"><Icon name="phone" size={14} /></span>
-          <div>
-            <p className="info-label">Phone</p>
-            <p className="info-value">{data.contact.phone}</p>
-          </div>
-        </a>
         <div className="info-item">
           <span className="info-icon"><Icon name="pin" size={14} /></span>
           <div>
