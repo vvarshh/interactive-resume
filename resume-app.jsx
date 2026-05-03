@@ -145,7 +145,7 @@ function Sidebar({ data }) {
       </div>
 
       <p className="side-h">About</p>
-      <p style={{fontSize:12, color:'var(--text-muted)', margin:0, lineHeight:1.55}}>{data.about}</p>
+      <p style={{fontSize:12, color:'var(--text-on-dark)', margin:0, lineHeight:1.55}}>{data.about}</p>
 
       <p className="side-h">Languages</p>
       <div className="lang-list">

@@ -125,7 +125,7 @@ window.RESUME = {
       logoImg: "./images/nus.png",
       school: "National University of Singapore",
       detail: "B.Sc. (Hons), Business Analytics",
-      coursework: "Machine Learning · DSA · Predictive Analytics · Application Systems Development · Economics",
+      coursework: "Machine Learning · AI · Predictive Analytics · Application Systems Development · Economics",
       date: "Aug 2021 — May 2025"
     },
     {
@@ -133,8 +133,8 @@ window.RESUME = {
       logoColor: "linear-gradient(135deg, #0065BD, #003359)",
       logoImg: "./images/tum.png",
       school: "Technical University of Munich",
-      detail: "NUS Overseas Colleges — Entrepreneurship & Innovation",
-      coursework: "Exchange semester focused on early-stage startup operations and product",
+      detail: "Exchange semester — specialising in Entrepreneurship & Innovation",
+      coursework: "",
       date: "Jul 2023 — Dec 2023"
     }
   ],
