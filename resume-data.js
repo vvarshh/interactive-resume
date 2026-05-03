@@ -159,10 +159,10 @@ window.RESUME = {
     }
   ],
   tools: [
-    { letter: "T",   name: "Tableau",   desc: "Dashboards",     color: "#1F4E89", imgUrl: "./images/tableau.png" },
+    { letter: "T",   name: "Tableau",   desc: "Dashboards",     color: "#1F4E89", imgUrl: "./images/tableau.jpg" },
     { letter: "L",   name: "Looker",    desc: "BI",             color: "#4285F4", imgUrl: "./images/looker.svg" },
     { letter: "❄",   name: "Snowflake", desc: "Warehouse",      color: "#29B5E8", imgUrl: "./images/snowflake.svg" },
-    { letter: "D",   name: "Denodo",    desc: "Virtualization", color: "#1B7CB0" },
+    { letter: "D",   name: "Denodo",    desc: "Virtualization", color: "#1B7CB0", imgUrl: "./images/denodo.png" },
     { letter: "Dk",  name: "Dataiku",   desc: "ML Platform",    color: "#2AB1AC", imgUrl: "./images/dataiku.svg" },
     { letter: "J",   name: "Jenkins",   desc: "CI/CD",          color: "#D33833", imgUrl: "./images/jenkins.svg" },
     { letter: "aws", name: "AWS",       desc: "Cloud",          color: "#232F3E", imgUrl: "./images/aws.svg" },
