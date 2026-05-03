@@ -16,9 +16,9 @@
   --text-on-dark: #F4F1EA;
   --text-on-dark-muted: #A8AEB8;
 
-  --accent: #D97757;
-  --accent-soft: #FCEFE8;
-  --accent-deep: #B5563A;
+  --accent: #2563EB;
+  --accent-soft: #EFF6FF;
+  --accent-deep: #1D4ED8;
   --accent-2: #0F4C81;
   --accent-3: #0AAE7A;
 
@@ -48,9 +48,9 @@
   --text-on-dark: #ECE7DD;
   --text-on-dark-muted: #8A8F99;
 
-  --accent: #E08868;
-  --accent-soft: #2A1A14;
-  --accent-deep: #F0997A;
+  --accent: #60A5FA;
+  --accent-soft: #172554;
+  --accent-deep: #93C5FD;
 
   --border: #262A33;
   --border-strong: #353A45;
@@ -139,12 +139,19 @@ a { color: inherit; text-decoration: none; }
   background:
     repeating-linear-gradient(
       135deg,
-      #D97757 0 14px,
-      #C8633E 14px 28px,
+      #2563EB 0 14px,
+      #1D4ED8 14px 28px,
       #0F4C81 28px 42px,
       #0E3D6B 42px 56px
     );
   position: relative;
+}
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
 }
 .avatar-stripes::after {
   content: "";
@@ -235,6 +242,41 @@ a.info-item:hover .info-value { color: var(--accent); }
 /* ===== Main / Sections ===== */
 .main { min-width: 0; }
 .timeline { display: flex; flex-direction: column; gap: 28px; }
+
+/* ===== Section Nav ===== */
+.section-nav {
+  display: flex;
+  gap: 6px;
+  padding: 12px 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  margin-bottom: 4px;
+}
+.section-nav::-webkit-scrollbar { display: none; }
+.nav-tab {
+  flex-shrink: 0;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--font-body);
+}
+.nav-tab:hover { border-color: var(--accent); color: var(--accent); }
+.nav-tab.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+/* ===== Logo images ===== */
+.logo-has-img { border: 1px solid var(--border) !important; overflow: hidden; }
+.logo-img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 5px; box-sizing: border-box; }
 
 .section {
   background: var(--bg-card);
@@ -397,7 +439,7 @@ a.info-item:hover .info-value { color: var(--accent); }
 }
 .tag:hover { background: var(--bg-tag-hover); }
 .tag-accent { background: var(--accent-soft); color: var(--accent-deep); font-weight: 500; }
-[data-theme="dark"] .tag-accent { background: rgba(217,119,87,0.15); color: var(--accent); }
+[data-theme="dark"] .tag-accent { background: rgba(37,99,235,0.15); color: var(--accent); }
 
 /* ===== Projects ===== */
 .projects-grid {

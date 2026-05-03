@@ -1,6 +1,47 @@
 // Main React app
 const { useState, useEffect, useRef } = React;
 
+const NAV_TABS = ['Experience', 'Projects', 'Education', 'Skills', 'Tools', 'Leadership'];
+
+function NavBar() {
+  const [active, setActive] = useState('Experience');
+
+  useEffect(() => {
+    const observers = [];
+    NAV_TABS.forEach(name => {
+      const el = document.getElementById(`sec-${name.toLowerCase()}`);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(name); },
+        { rootMargin: '-20% 0px -70% 0px' }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach(o => o.disconnect());
+  }, []);
+
+  const scrollTo = (name) => {
+    const el = document.getElementById(`sec-${name.toLowerCase()}`);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setActive(name);
+  };
+
+  return (
+    <nav className="section-nav" aria-label="Resume sections">
+      {NAV_TABS.map(name => (
+        <button
+          key={name}
+          className={`nav-tab${active === name ? ' active' : ''}`}
+          onClick={() => scrollTo(name)}
+        >
+          {name}
+        </button>
+      ))}
+    </nav>
+  );
+}
+
 function ExpCard({ exp, isOpen, onToggle }) {
   const bodyRef = useRef(null);
   const [maxH, setMaxH] = useState(0);
@@ -14,8 +55,10 @@ function ExpCard({ exp, isOpen, onToggle }) {
   return (
     <div className={`exp-card ${isOpen ? 'is-open' : ''} ${exp.current ? 'is-current' : ''}`}>
       <button className="exp-header" onClick={onToggle} aria-expanded={isOpen}>
-        <div className="exp-logo" style={{ background: exp.logoColor, color: 'white' }}>
-          {exp.logoText}
+        <div className={`exp-logo${exp.logoImg ? ' logo-has-img' : ''}`} style={{ background: exp.logoImg ? 'white' : exp.logoColor, color: 'white' }}>
+          {exp.logoImg
+            ? <img src={exp.logoImg} alt={exp.company} className="logo-img" />
+            : exp.logoText}
         </div>
         <div className="exp-meta">
           <p className="exp-role">{exp.role}</p>
@@ -55,8 +98,11 @@ function ExpCard({ exp, isOpen, onToggle }) {
 function Sidebar({ data }) {
   return (
     <aside className="sidebar">
-      <div className="avatar avatar-stripes" title="Photo placeholder">
-        <span style={{background:'rgba(0,0,0,0.25)',padding:'4px 8px',borderRadius:6,backdropFilter:'blur(4px)'}}>VR</span>
+      <div className={`avatar${data.profilePhoto ? '' : ' avatar-stripes'}`}>
+        {data.profilePhoto
+          ? <img src={data.profilePhoto} alt={data.name} className="avatar-photo" />
+          : <span style={{background:'rgba(0,0,0,0.25)',padding:'4px 8px',borderRadius:6,backdropFilter:'blur(4px)'}}>VR</span>
+        }
       </div>
       <h1 className="name">{data.name}</h1>
       <p className="role">{data.role}</p>
@@ -127,7 +173,6 @@ function App() {
     localStorage.setItem('rt', theme);
   }, [theme]);
 
-  // Mount toolbar
   useEffect(() => {
     const tb = document.getElementById('toolbar');
     if (!tb) return;
@@ -154,10 +199,10 @@ function App() {
     <div className="page">
       <Sidebar data={data} />
       <main className="main">
+        <NavBar />
         <div className="timeline">
 
-          {/* EXPERIENCE */}
-          <section className="section" data-screen-label="Experience">
+          <section id="sec-experience" className="section" data-screen-label="Experience">
             <h2 className="section-title">Experience</h2>
             <p style={{fontSize:12,color:'var(--text-faint)',margin:'-12px 0 16px'}}>Click any role to expand the details.</p>
             {data.experience.map((exp, i) => (
@@ -170,8 +215,7 @@ function App() {
             ))}
           </section>
 
-          {/* PROJECTS */}
-          <section className="section" data-screen-label="Projects">
+          <section id="sec-projects" className="section" data-screen-label="Projects">
             <h2 className="section-title">Latest Projects</h2>
             <div className="projects-grid">
               {data.projects.map((p, i) => (
@@ -191,13 +235,14 @@ function App() {
             </div>
           </section>
 
-          {/* EDUCATION */}
-          <section className="section" data-screen-label="Education">
+          <section id="sec-education" className="section" data-screen-label="Education">
             <h2 className="section-title">Education</h2>
             <div className="edu-grid">
               {data.education.map((e, i) => (
                 <div key={i} className="edu-card">
-                  <div className="edu-logo" style={{background: e.logoColor}}>{e.logoText}</div>
+                  <div className={`edu-logo${e.logoImg ? ' logo-has-img' : ''}`} style={{background: e.logoImg ? 'white' : e.logoColor}}>
+                    {e.logoImg ? <img src={e.logoImg} alt={e.school} className="logo-img" /> : e.logoText}
+                  </div>
                   <div>
                     <p className="edu-tag">University</p>
                     <p className="edu-school">{e.school}</p>
@@ -210,8 +255,7 @@ function App() {
             </div>
           </section>
 
-          {/* SKILLS */}
-          <section className="section" data-screen-label="Skills">
+          <section id="sec-skills" className="section" data-screen-label="Skills">
             <h2 className="section-title">Skills</h2>
             {data.skills.map((s, i) => (
               <div key={i} className="skill-row">
@@ -228,14 +272,13 @@ function App() {
             ))}
           </section>
 
-          {/* TOOLS */}
-          <section className="section" data-screen-label="Tools">
+          <section id="sec-tools" className="section" data-screen-label="Tools">
             <h2 className="section-title">Tools</h2>
             <div className="tools-grid">
               {data.tools.map((t, i) => (
                 <div key={i} className="tool-card">
-                  <div className="tool-logo" style={{background: t.color, color: 'white', fontWeight: 600, fontSize: 14}}>
-                    {t.letter}
+                  <div className={`tool-logo${t.imgUrl ? ' logo-has-img' : ''}`} style={{background: t.imgUrl ? 'white' : t.color, color: 'white', fontWeight: 600, fontSize: 14}}>
+                    {t.imgUrl ? <img src={t.imgUrl} alt={t.name} className="logo-img" /> : t.letter}
                   </div>
                   <p className="tool-name">{t.name}</p>
                   <p className="tool-desc">{t.desc}</p>
@@ -244,8 +287,7 @@ function App() {
             </div>
           </section>
 
-          {/* LEADERSHIP */}
-          <section className="section" data-screen-label="Leadership">
+          <section id="sec-leadership" className="section" data-screen-label="Leadership">
             <h2 className="section-title">Leadership & Activities</h2>
             <div className="lead-grid">
               {data.leadership.map((l, i) => (

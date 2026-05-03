@@ -1,6 +1,7 @@
 window.RESUME = {
   name: "Varsha Ramkumar",
   role: "Product Associate · AI & Fintech",
+  profilePhoto: "./profile.png",
   quote: {
     text: "I ship AI products from 0→1 in regulated, non-technical environments — translating ambiguous needs into things people actually use.",
     author: "Varsha"
@@ -17,7 +18,7 @@ window.RESUME = {
   languages: [
     { flag: "🇬🇧", name: "English", level: "Native" },
     { flag: "🇮🇳", name: "Tamil", level: "Native" },
-    { flag: "🇸🇬", name: "Mandarin", level: "Conversational" }
+    { flag: "🇩🇪", name: "German", level: "Basic" }
   ],
   experience: [
     {
@@ -26,6 +27,7 @@ window.RESUME = {
       client: "Singapore Exchange (SGX)",
       logoText: "Nx",
       logoColor: "#0F4C81",
+      logoImg: "https://logo.clearbit.com/neoxam.com",
       dates: "Jul 2025 — Present",
       location: "Singapore",
       current: true,
@@ -44,6 +46,7 @@ window.RESUME = {
       company: "Infineon Technologies",
       logoText: "iF",
       logoColor: "#1A1A2E",
+      logoImg: "https://logo.clearbit.com/infineon.com",
       dates: "Jan 2025 — May 2025",
       location: "Singapore",
       tagline: "Operational analytics and AI governance for global semiconductor ops.",
@@ -58,6 +61,7 @@ window.RESUME = {
       company: "Sentosa Development Corporation",
       logoText: "SDC",
       logoColor: "#0AAE7A",
+      logoImg: "https://logo.clearbit.com/sentosa.com.sg",
       dates: "May 2024 — Jul 2024",
       location: "Singapore",
       tagline: "Shipped two AI products 0→1 into a non-technical organization.",
@@ -73,6 +77,7 @@ window.RESUME = {
       company: "Knowron GmbH",
       logoText: "Kn",
       logoColor: "#E8533F",
+      logoImg: "https://logo.clearbit.com/knowron.com",
       dates: "Jul 2023 — Dec 2023",
       location: "Munich, Germany",
       tagline: "Industrial AI assistant for technicians at an early-stage startup.",
@@ -109,7 +114,7 @@ window.RESUME = {
       title: "Infineon Ops Dashboards",
       desc: "Suite of 6 Tableau dashboards used by 40+ stakeholders across global semiconductor ops.",
       icon: "▤",
-      iconColor: "#E8853F",
+      iconColor: "#2563EB",
       link: "Snapshot"
     }
   ],
@@ -117,6 +122,7 @@ window.RESUME = {
     {
       logoText: "NUS",
       logoColor: "linear-gradient(135deg, #EF7C00, #B85A00)",
+      logoImg: "https://logo.clearbit.com/nus.edu.sg",
       school: "National University of Singapore",
       detail: "B.Sc. (Hons), Business Analytics",
       coursework: "Machine Learning · DSA · Predictive Analytics · Application Systems Development · Economics",
@@ -125,6 +131,7 @@ window.RESUME = {
     {
       logoText: "TUM",
       logoColor: "linear-gradient(135deg, #0065BD, #003359)",
+      logoImg: "https://logo.clearbit.com/tum.de",
       school: "Technical University of Munich",
       detail: "NUS Overseas Colleges — Entrepreneurship & Innovation",
       coursework: "Exchange semester focused on early-stage startup operations and product",
@@ -135,7 +142,7 @@ window.RESUME = {
     {
       cat: "Product",
       icon: "product",
-      iconColor: "#D97757",
+      iconColor: "#2563EB",
       items: ["Customer Discovery", "User Stories", "RICE Prioritisation", "Roadmapping", "PRDs", "A/B Testing", "OKRs", "Stakeholder Mgmt", "Launch Readiness", "Operational Process Design"]
     },
     {
@@ -152,18 +159,18 @@ window.RESUME = {
     }
   ],
   tools: [
-    { letter: "T",  name: "Tableau",  desc: "Dashboards", color: "#1F4E89" },
-    { letter: "L",  name: "Looker",   desc: "BI",         color: "#4285F4" },
-    { letter: "❄",  name: "Snowflake",desc: "Warehouse",  color: "#29B5E8" },
-    { letter: "D",  name: "Denodo",   desc: "Virtualization", color: "#1B7CB0" },
-    { letter: "Dk", name: "Dataiku",  desc: "ML Platform",color: "#2AB1AC" },
-    { letter: "J",  name: "Jenkins",  desc: "CI/CD",      color: "#D33833" },
-    { letter: "aws",name: "AWS",      desc: "Cloud",      color: "#232F3E" },
-    { letter: "🐳", name: "Docker",   desc: "Containers", color: "#2496ED" },
-    { letter: "n8",  name: "n8n",     desc: "Automation", color: "#EA4B71" },
-    { letter: "Fi", name: "Figma",    desc: "Design",     color: "#0E0E0E" },
-    { letter: "Py", name: "Python",   desc: "Scripting",  color: "#FFD43B" },
-    { letter: "SQL",name: "SQL",      desc: "Querying",   color: "#5A5A5A" }
+    { letter: "T",   name: "Tableau",   desc: "Dashboards",     color: "#1F4E89", imgUrl: "https://logo.clearbit.com/tableau.com" },
+    { letter: "L",   name: "Looker",    desc: "BI",             color: "#4285F4", imgUrl: "https://logo.clearbit.com/looker.com" },
+    { letter: "❄",   name: "Snowflake", desc: "Warehouse",      color: "#29B5E8", imgUrl: "https://logo.clearbit.com/snowflake.com" },
+    { letter: "D",   name: "Denodo",    desc: "Virtualization", color: "#1B7CB0", imgUrl: "https://logo.clearbit.com/denodo.com" },
+    { letter: "Dk",  name: "Dataiku",   desc: "ML Platform",    color: "#2AB1AC", imgUrl: "https://logo.clearbit.com/dataiku.com" },
+    { letter: "J",   name: "Jenkins",   desc: "CI/CD",          color: "#D33833", imgUrl: "https://logo.clearbit.com/jenkins.io" },
+    { letter: "aws", name: "AWS",       desc: "Cloud",          color: "#232F3E", imgUrl: "https://logo.clearbit.com/aws.amazon.com" },
+    { letter: "🐳",  name: "Docker",    desc: "Containers",     color: "#2496ED", imgUrl: "https://logo.clearbit.com/docker.com" },
+    { letter: "n8",  name: "n8n",       desc: "Automation",     color: "#EA4B71", imgUrl: "https://logo.clearbit.com/n8n.io" },
+    { letter: "Fi",  name: "Figma",     desc: "Design",         color: "#0E0E0E", imgUrl: "https://logo.clearbit.com/figma.com" },
+    { letter: "Py",  name: "Python",    desc: "Scripting",      color: "#FFD43B", imgUrl: "https://logo.clearbit.com/python.org" },
+    { letter: "SQL", name: "SQL",       desc: "Querying",       color: "#5A5A5A" }
   ],
   leadership: [
     {
