@@ -273,6 +273,8 @@ a.info-item:hover .info-value { color: var(--accent); }
 }
 .nav-tab:hover { border-color: var(--accent); color: var(--accent); }
 .nav-tab.active { background: var(--accent); border-color: var(--accent); color: white; }
+.nav-tab-external { border-color: var(--accent); color: var(--accent); text-decoration: none; margin-left: 4px; }
+.nav-tab-external:hover { background: var(--accent); color: white; }
 
 /* ===== Logo images ===== */
 .logo-has-img { border: 1px solid var(--border) !important; overflow: hidden; }

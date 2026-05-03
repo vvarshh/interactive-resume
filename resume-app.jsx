@@ -38,6 +38,14 @@ function NavBar() {
           {name}
         </button>
       ))}
+      <a
+        href="https://varshatech.substack.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="nav-tab nav-tab-external"
+      >
+        Substack ↗
+      </a>
     </nav>
   );
 }
