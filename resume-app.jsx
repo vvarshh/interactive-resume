@@ -212,10 +212,11 @@ function App() {
           </section>
 
           <section id="sec-projects" className="section" data-screen-label="Projects">
-            <h2 className="section-title">Latest Projects</h2>
+            <h2 className="section-title">Building Things</h2>
+            <p style={{fontSize:12,color:'var(--text-faint)',margin:'-12px 0 16px'}}>I like building things to solve problems I've felt or to learn new things. Each of these is on my GitHub.</p>
             <div className="projects-grid">
               {data.projects.map((p, i) => (
-                <a key={i} className="project-card" href="#">
+                <a key={i} className="project-card" href={p.link} target="_blank" rel="noreferrer">
                   <div className="project-thumb">
                     <div className="project-thumb-icon" style={{color: p.iconColor, fontSize: 22}}>{p.icon}</div>
                   </div>
@@ -223,7 +224,7 @@ function App() {
                     <p className="project-title">{p.title}</p>
                     <p className="project-desc">{p.desc}</p>
                     <span className="project-link">
-                      <Icon name="ext" size={11} /> {p.link}
+                      <Icon name="ext" size={11} /> {p.linkLabel || p.link}
                     </span>
                   </div>
                 </a>

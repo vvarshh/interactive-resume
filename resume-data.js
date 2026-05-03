@@ -90,32 +90,20 @@ window.RESUME = {
   ],
   projects: [
     {
-      title: "SGX Trading Engine Integration",
-      desc: "Built modular API architecture processing millions of trade records daily. Led launch and post-launch triage.",
-      icon: "₪",
-      iconColor: "#0F4C81",
-      link: "Live in production"
-    },
-    {
-      title: "Sentosa RAG Visitor Assistant",
-      desc: "Public-facing AI guide that supported 200+ visitors during pilot, with positive sentiment.",
+      title: "Notes MCP Server",
+      desc: "A personal notes MCP server that lets Claude search, summarise, and connect ideas across your stored notes. Think: mini Notion + AI brain.",
       icon: "✦",
-      iconColor: "#0AAE7A",
-      link: "Case study"
+      iconColor: "#2563EB",
+      link: "https://github.com/vvarshh/notes-mcp",
+      linkLabel: "View on GitHub"
     },
     {
-      title: "Internal Policy Bot — SDC",
-      desc: "RAG assistant that cut policy-query resolution time by 40% across 10+ ops staff.",
+      title: "BrainWaves",
+      desc: "Coming soon.",
       icon: "◆",
       iconColor: "#7A5FFF",
-      link: "Case study"
-    },
-    {
-      title: "Infineon Ops Dashboards",
-      desc: "Suite of 6 Tableau dashboards used by 40+ stakeholders across global semiconductor ops.",
-      icon: "▤",
-      iconColor: "#2563EB",
-      link: "Snapshot"
+      link: "https://github.com/vvarshh/BrainWaves",
+      linkLabel: "View on GitHub"
     }
   ],
   education: [
