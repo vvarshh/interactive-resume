@@ -1,6 +1,6 @@
 window.RESUME = {
   name: "Varsha Ramkumar",
-  role: "Product Associate · AI & Fintech",
+  role: "AI Agents & Product",
   profilePhoto: "./profile.png",
   quote: {
     text: "I ship AI products from 0→1 in regulated, non-technical environments — translating ambiguous needs into things people actually use.",
@@ -170,7 +170,7 @@ window.RESUME = {
     { letter: "n8",  name: "n8n",       desc: "Automation",     color: "#EA4B71", imgUrl: "./images/n8n.svg" },
     { letter: "Fi",  name: "Figma",     desc: "Design",         color: "#0E0E0E", imgUrl: "./images/figma.svg" },
     { letter: "Py",  name: "Python",    desc: "Scripting",      color: "#FFD43B", imgUrl: "./images/python.svg" },
-    { letter: "SQL", name: "SQL",       desc: "Querying",       color: "#5A5A5A" }
+    { letter: "SQL", name: "SQL",       desc: "Querying",       color: "#5A5A5A", imgUrl: "./images/sql.png" }
   ],
   leadership: [
     {

@@ -107,11 +107,6 @@ function Sidebar({ data }) {
       <h1 className="name">{data.name}</h1>
       <p className="role">{data.role}</p>
 
-      <p className="quote">
-        {data.quote.text}
-        <span className="quote-author">— {data.quote.author}</span>
-      </p>
-
       <div className="info-list">
         <a className="info-item" href={`mailto:${data.contact.email}`}>
           <span className="info-icon"><Icon name="mail" size={14} /></span>
