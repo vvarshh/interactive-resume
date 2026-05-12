@@ -91,18 +91,29 @@ window.RESUME = {
   projects: [
     {
       title: "Notes MCP Server",
-      desc: "A personal notes MCP server that lets Claude search, summarise, and connect ideas across your stored notes. Think: mini Notion + AI brain.",
+      desc: "Personal knowledge base MCP server — Claude can search, summarise & connect ideas across your notes.",
+      tags: ["Python", "MCP", "FastMCP"],
       icon: "✦",
       iconColor: "#2563EB",
       link: "https://github.com/vvarshh/notes-mcp",
       linkLabel: "View on GitHub"
     },
     {
-      title: "BrainWaves",
-      desc: "Coming soon.",
+      title: "AI Job Tracker",
+      desc: "Live AI/ML job tracker for Singapore — pulls from MyCareersFuture, Google Jobs, LinkedIn, Indeed & Remotive, with keyword search and sorting.",
+      tags: ["Python", "Streamlit", "SerpAPI"],
       icon: "◆",
+      iconColor: "#0AAE7A",
+      link: "https://github.com/vvarshh/ai-job-tracker",
+      linkLabel: "View on GitHub"
+    },
+    {
+      title: "Closet App",
+      desc: "Outfit diary — log a fit in 30 seconds, track wear counts, and get a weekly Wrapped of your wardrobe.",
+      tags: [],
+      icon: "▤",
       iconColor: "#7A5FFF",
-      link: "https://github.com/vvarshh/BrainWaves",
+      link: "https://github.com/vvarshh/closet-app",
       linkLabel: "View on GitHub"
     }
   ],

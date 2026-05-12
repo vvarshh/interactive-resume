@@ -223,6 +223,11 @@ function App() {
                   <div className="project-body">
                     <p className="project-title">{p.title}</p>
                     <p className="project-desc">{p.desc}</p>
+                    {p.tags && p.tags.length > 0 && (
+                      <div className="exp-tags" style={{marginBottom: 6}}>
+                        {p.tags.map((t, j) => <span key={j} className="tag">{t}</span>)}
+                      </div>
+                    )}
                     <span className="project-link">
                       <Icon name="ext" size={11} /> {p.linkLabel || p.link}
                     </span>
